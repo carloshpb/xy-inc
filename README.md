@@ -2,86 +2,47 @@
 
 Serviços Back-End de uma plataforma GPS , para auxiliar pessoas na localização de pontos de interesse.
 
+Back-End services of a GPS platform, to auxiliate people in the localization of points of interest.
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+After cloning this small service project to your computer (by using the command git clone https://github.com/carloshpb/xy-inc.git on your terminal, or simply downloading it from the Clone button of this page), you should go to the folder of the project, open a terminal at the directory of it and type these commands :
+
+(This command will run the Maven Wrapper of this project)
+./mvnw clean package
+
+(This command will run the application and it's local host)
+java -jar target/gpsxyinc-0.0.1-SNAPSHOT.jar
+
+After that, try to access the 3 services by those URLs :
+
+(Service that will list all the coordinators saved at the database)
+localhost:8080/gps/listarCoordenadas
+
+(Service to register new interest points of interest, with 3 attributes : name, integer x and integer y)
+localhost:8080/gps/cadastrarCoordenada/{name-of-point-of-interest}/{coordinate-x}/{coordinate-y}
+
+(Service to show all points of interest by proximity, by sending 3 attributes : actual-x, actual-y and max-meters)
+http://localhost:8080/gps/buscarPonto/{actual-x}/{actual-y}/{max-meters}
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+It's needed to have JRE 8 or higher to run : 
+http://www.oracle.com/technetwork/pt/java/javase/downloads/jre8-downloads-2133155.html
+http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html
 
 ## Running the tests
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Spring Boot](https://projects.spring.io/spring-boot/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [JPA](http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html) - Used to manage data between Java objects / classes and a relational database
+* [H2](http://www.h2database.com/html/main.html) - Embedded database used
+* [Spring-Web Dependencies](https://mvnrepository.com/artifact/org.springframework/spring-web) - Conjunct of Maven web dependencies
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* **Carlos Humberto de Paula Borges** - *Initial work* - [PurpleBooth](https://github.com/carloshpb)
