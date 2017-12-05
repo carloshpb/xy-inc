@@ -45,4 +45,4 @@ Explain how to run the automated tests for this system
 
 ## Authors
 
-* **Carlos Humberto de Paula Borges** - *Initial work* - [PurpleBooth](https://github.com/carloshpb)
+* **Carlos Humberto de Paula Borges** - [GitHub](https://github.com/carloshpb)
