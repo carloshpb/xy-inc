@@ -11,15 +11,14 @@ After cloning this small service project to your computer (by using the command 
 
 This command will run the Maven Wrapper of this project, to configurate the project's dependencies :
 
-**Linux**
+**Linux**<br />
 ./mvnw clean package
 
 
-**Windows**
+**Windows**<br />
 mvnw.cmd clean install
 
-This command will run the application and it's local host :
-
+**This command will run the application and it's local host :**<br />
 java -jar target/gpsxyinc-0.0.1-SNAPSHOT.jar
 
 After that, try to access the 3 services by those URLs :
