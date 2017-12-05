@@ -42,6 +42,12 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.h
 
 To run the project's tests, go to it's directory and run this command :
 
+**Linux**<br />
+./mvnw test
+
+
+**Windows**<br />
+mvnw.cmd test
 
 ## Built With
 
