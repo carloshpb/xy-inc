@@ -19,11 +19,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @AutoConfigureTestDatabase(replace=Replace.NONE)
 public class CoordinateRepositoryTest {
 	
+	
 	@Autowired
 	private TestEntityManager entityManager;
 	
 	@Autowired
 	private CoordinateRepository repository;
+	
 	
 	@Test
 	public void should_find_no_coordinate_if_repository_is_empty() {

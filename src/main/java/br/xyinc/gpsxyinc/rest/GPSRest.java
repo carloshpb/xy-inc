@@ -64,8 +64,10 @@ public class GPSRest {
                                       @PathVariable ("y")    Integer y,
                                       @PathVariable ("max")  Integer max){
 		
+		Integer xMin = (x-max) <= 0 ? 0 : (x-max);
+		Integer yMin = (y-max) <= 0 ? 0 : (y-max);
 				
-		return coordinateRepository.findCoordinateByPointAndDistance(x,x+max,y,y+max);
+		return coordinateRepository.findCoordinateByPointAndDistance(xMin,(x+max),yMin,(y+max));
 		
        }
 }
